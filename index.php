@@ -10,6 +10,5 @@
 		<link rel="stylesheet" href="recursos/css/main.css" type="text/css" charset="utf-8">
 	</head>
 	<body>
-		
 	</body>
 </html>
