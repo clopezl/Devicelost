@@ -7,14 +7,16 @@
 # elimina_genero
 
 require_once('conex.php');
+
 function check_genero($clave,$valor){
-	$sql		= "SELECT id FROM GENEROS WHERE $clave = '$valor' LIMIT 1";
-	$registros	= floor(mysql_num_rows(mysql_query($sql)));
+	$sql		= "SELECT * FROM GENEROS WHERE $clave = '$valor' LIMIT 1";
+	$registros	= floor(mysql_num_rows(mysql_query($sql,connect())));
 	if($registros>0){
 		return true;
 	}else{
 		return false;
 	}
+	disconnect();
 }
 function valida_nombre_genero($nombre){
 	if(
@@ -32,39 +34,42 @@ function crea_genero($nombre){
 		return false;
 	}else{
 		$sql = "INSERT INTO GENEROS (nombre) VALUES ($nombre)";
-		if(mysql_query($sql,$db)){
+		if(mysql_query($sql,connect())){
 			return true;
 		}else{
 			return false;
 		}
 	}
+	disconnect();
 }
 function edita_genero($id,$nuevo_nombre){
 	if(!check_genero("id",$id) or !valida_nombre_genero($nuevo_nombre)){
 		return false;
 	}else{
 		$sql = "UPDATE GENEROS SET nombre = '$nuevo_nombre' WHERE id = $id LIMIT 1";
-		if(mysql_query($sql,$db)){
+		if(mysql_query($sql,connect())){
 			return true;
 		}else{
 			return false;
 		}
 	}
+	disconnect();
 }
 function elimina_genero($clave,$valor){
 
 	# No comprueba que no hayan discos (el gŽnero se guarda ah’) bajo el gŽnero especificado,
 	# cuando hayan registros se har‡ una funci—n que compruebe eso y se usar‡ en el esta.
-
-	if(check_genero($clave,$valor)){
+	
+	if(!check_genero($clave,$valor)){
 		return false;
 	}else{
-		$sql "DELETE FROM GENEROS WHERE $clave = '$valor' LIMIT 1";
-		if(mysql_query($sql,$db)){
+		$sql = "DELETE FROM GENEROS WHERE $clave = '$valor' LIMIT 1";
+		if(mysql_query($sql,connect())){
 			return true;
 		}else{
 			return false;
 		}
 	}
+	disconnect();
 }
 ?>

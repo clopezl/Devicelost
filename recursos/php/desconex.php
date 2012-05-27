@@ -1,3 +1,5 @@
 <?PHP
-mysql_close($db);
+function disconnect(){
+	mysql_close($db);
+}
 ?>
