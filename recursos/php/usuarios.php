@@ -1,10 +1,12 @@
 <?PHP
 
-# check_genero comprueba si un gŽnero existe
-# valida_nombre_genero comprueba que un nombre sea v‡lido para editar o crear gŽneros
-# crea_genero
-# edita_genero
-# elimina_genero
+# valida_email
+# check_user comprueba si un usuario existe
+# valida_user comprueba que un nombre sea v‡lido para editar o crear usuarios
+# valida_nivel_user comprueba que un nivel sea v‡lido para editar o crear usuarios
+# crea_user
+# edita_user
+# elimina_user
 
 require_once('conex.php');
 require_once('errores.php');
@@ -63,7 +65,7 @@ function valida_user($user){
 		return false;
 	}
 }
-function valida_nivel_usuario($int){
+function valida_nivel_user($int){
 	if($int == 0 || $int == 1 || $int == 2){
 		return true;
 	}else{
@@ -71,7 +73,7 @@ function valida_nivel_usuario($int){
 	}
 }
 
-function crea_usuario($user,$pass,$email){
+function crea_user($user,$pass,$email){
 	if(!valida_user($user)){
 		serror('Usuario no v‡lido');
 		return false;
@@ -138,7 +140,7 @@ function edita_user($campo,$user,$clave,$valor){
 				}			
 			break;
 			case 'nivel':
-				if(valida_nivel_usuario($valor)){
+				if(valida_nivel_user($valor)){
 					$sql = "UPDATE USUARIOS SET $clave = '$valor' WHERE id = $id LIMIT 1";
 				}else{
 					serror('Nuevo nivel de usuario no valido');
@@ -155,7 +157,7 @@ function edita_user($campo,$user,$clave,$valor){
 	}
 	disconnect();
 }
-function elimina_usuario($id){
+function elimina_user($id){
 
 	# No se ha planteado que pasa con el contenido subido por el usuario eliminado.
 	
