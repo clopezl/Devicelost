@@ -1,0 +1,15 @@
+.input1{
+	width:100%;
+	box-sizing: border-box;
+	border:1px solid #bdc1c3;
+	box-shadow:inset 1px 1px 2px 0px rgba(0,0,0,0.1), 0px 0px 0px 4px #f2f5f7;
+	border-radius: 2px;
+	padding: 7px 10px;
+	font-size: 13px;
+	margin:7px 0px;
+	color:#666;
+}
+.input1:focus{
+	border:1px solid #7dc6dd;
+	box-shadow:inset 1px 1px 2px 0px rgba(0,0,0,0.1), 0px 0px 0px 4px #e0f1fc;
+}

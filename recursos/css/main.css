@@ -1,0 +1,85 @@
+@import url(typo.css);
+@import url(ui.css);
+
+.cb{
+	clear: both;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+
+*{
+	font-family: Helvetica, Arial;
+}
+*:focus{
+	outline:none;
+}
+body{
+	background-image: url(../img/bg.png);
+	margin: 0px;
+	padding: 0px;
+}
+
+#header{
+	border-bottom: 1px solid #000;
+	background: #36373b;
+	background: -moz-linear-gradient(top,  #36373b 0%, #2c2d32 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#36373b), color-stop(100%,#2c2d32));
+	background: -webkit-linear-gradient(top,  #36373b 0%,#2c2d32 100%);
+	background: -o-linear-gradient(top,  #36373b 0%,#2c2d32 100%);
+	background: -ms-linear-gradient(top,  #36373b 0%,#2c2d32 100%);
+	background: linear-gradient(to bottom,  #36373b 0%,#2c2d32 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#36373b', endColorstr='#2c2d32',GradientType=0 );
+	height: 59px;
+}
+h1{
+	color:#d8dbe5;
+	text-shadow:0px 1px 0px #000;
+	font-family: Aldo;
+	text-transform: uppercase;
+	font-size: 35px;
+	margin: 0px;
+	padding: 0px;
+	width:220px;
+	text-align: center;
+	height: 59px;
+	padding:10px 0px 0px 0px;
+	box-sizing: border-box;
+}
+
+form#login{
+	position: absolute;
+	background-color: #fdfdfd;
+	border-radius: 5px;
+	width:400px;
+	box-shadow: 0px 2px 5px 0px #000;
+	left:50%;
+	margin-left:-200px;
+	top:35%;
+}
+	form#login .heading{
+		padding: 15px;
+		text-align: center;
+		color:#555;
+		font-size: 13px;
+		font-weight: bold;
+		border-radius:5px 5px 0px 0px;
+		
+		box-shadow: inset 0px -1px 0px 0px #FFF,
+					0px 1px 0px 0px #bfc3c5;
+
+		background: #ffffff;
+		background: -moz-linear-gradient(top,  #ffffff 0%, #ecf1f3 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#ecf1f3));
+		background: -webkit-linear-gradient(top,  #ffffff 0%,#ecf1f3 100%);
+		background: -o-linear-gradient(top,  #ffffff 0%,#ecf1f3 100%);
+		background: -ms-linear-gradient(top,  #ffffff 0%,#ecf1f3 100%);
+		background: linear-gradient(to bottom,  #ffffff 0%,#ecf1f3 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ecf1f3',GradientType=0 );
+	}
+	form#login .content{
+		padding: 30px;
+	}
