@@ -181,4 +181,44 @@ function elimina_user($id){
 	}
 	disconnect();
 }
+
+function login($user,$pass){
+	if (!isset($_SESSION)) {
+		session_start();
+	}
+	$logeado = false;
+	if(check_user("user",$user)){
+		$sql = "SELECT * FROM USUARIOS WHERE user = '$user' AND pass = '".md5($pass)."' LIMIT 1";
+		$res = mysql_query($sql,connect());
+		while($row = mysql_fetch_array($res)) { 
+			$_SESSION['id']		= $row['id'];
+			$_SESSION['user']	= $row['user'];
+			$_SESSION['email']	= $row['email'];
+			$_SESSION['nivel']	= $row['nivel'];
+			$logeado			= true;
+			mysql_query("UPDATE USUARIOS SET datetime_login = '".datetime_now()."' WHERE id = ".$row['id']." LIMIT 1", connect());
+		}
+		if($logeado){
+			return true;
+		}else{
+			serror('La contrase–a no es v‡lida');
+			return false;
+		}
+	}else{
+		serror('El usuario no existe');
+		return false;
+	}
+	disconnect();
+}
+
+function logout(){
+	if (!isset($_SESSION)) {
+		session_start();
+	}
+	unset($_SESSION['id']);
+	unset($_SESSION['user']);
+	unset($_SESSION['email']);
+	unset($_SESSION['nivel']);
+	session_destroy();
+}
 ?>

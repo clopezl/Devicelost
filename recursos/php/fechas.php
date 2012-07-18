@@ -4,7 +4,7 @@ function datetime_now(){
 }
 function datetime2es($datetime){
 	// Convierte el formato de datetime AAAA-MM-DD HH:MM:SS al espa–ol, DD-MM-AA HH:MM:SS
-	date
+	return date("d-m-Y H:i:s"strtotime($datetime));
 }
 function fecha2humano($date){
 	if(empty($date)){
