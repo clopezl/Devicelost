@@ -1,3 +1,8 @@
+<?PHP
+if (!isset($_SESSION)) {
+	session_start();
+}
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -13,26 +18,24 @@
 	
 	<div id="header">
 		<h1>Devicelost</h1>
+		
+		<ul <? if(!isset($_SESSION['id'])){ echo 'style="display:none;"';} ?>>
+			<li><a href="#">Sobre Devicelost</a></li>
+			<li><a href="#">Opciones</a></li>
+			<li><a href="login-logout.php" id="logout">Cerrar sesi&oacute;n</a></li>
+		</ul>
+		
 	</div>
 	
 	<div id="main">
 		
-		<form id="login" class="animated fadeInUp">
-			<div class="heading">Iniciar sesi&oacute;n</div>
-			<div class="content">
-				
-				<p>Devicelost.com es privado y por el momento no acepta registros. M&aacute;s informaci&oacute;n en <a href="http://www.github.com/emmgfx/Devicelost" target="_blank">GitHub</a></p>
-			
-				<input type="text" placeholder="Nombre de usuario" class="input1" autofocus="autofocus" tabindex="1" />
-				<input type="password" placeholder="Contrase&ntilde;a" class="input1" tabindex="2" />
-				
-				<div class="cb"><br /></div>
-					<input type="checkbox" name="mantener" id="mantener" class="fl" tabindex="4" />
-					<label for="mantener" class="fl">Mantener sesi&oacute;n en este ordenador</label>
-					<input type="submit" value="Entrar" class="fr button1" tabindex="3" />
-				<div class="cb"></div>
-			</div>
-		</form>
+		<?PHP
+		if(!isset($_SESSION['id'])){
+			include('login-form.php');
+		}else{
+			include('reproductor.php');
+		}
+		?>
 		
 	</div>
 	

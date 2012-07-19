@@ -2,7 +2,7 @@
 
 # valida_email
 # check_user comprueba si un usuario existe
-# valida_user comprueba que un nombre sea v‡lido para editar o crear usuarios
+# valida_user comprueba que un user sea v‡lido para editar o crear usuarios
 # valida_nivel_user comprueba que un nivel sea v‡lido para editar o crear usuarios
 # crea_user
 # edita_user
@@ -12,9 +12,9 @@ require_once('conex.php');
 require_once('errores.php');
 require_once('fechas.php');
 
-function valida_email($email='' , $checkMX=true , $checkSyntax=true){
+function valida_email($email='' , $checkMX=false , $checkSyntax=true){
 	if($checkSyntax){
-		if(eregi("^([_a-z0-9-]+)(\.[_a-z0-9-]+)*@([a-z0-9-]+)(\.[a-z0-9-]+)*(\.[a-z]{2,4})$",$email)){
+		if(preg_match("/^[_\.0-9a-zA-Z-]+@([0-9a-zA-Z][0-9a-zA-Z-]+\.)+[a-zA-Z]{2,6}$/i",$email)){
 			$syntaxValida = true;
 		}else{
 			$syntaxValida = false;
@@ -41,9 +41,10 @@ function valida_email($email='' , $checkMX=true , $checkSyntax=true){
 }
 
 function check_user($clave,$valor){
-	if($clave=='id' or $clave=='nombre'){
+	if($clave=='id' or $clave=='user'){
 		$sql		= "SELECT * FROM USUARIOS WHERE $clave = '$valor' LIMIT 1";
 		$registros	= floor(mysql_num_rows(mysql_query($sql,connect())));
+		echo mysql_error();
 		if($registros>0){
 			return true;
 		}else{
@@ -58,7 +59,7 @@ function valida_user($user){
 	if(
 		(strlen($user)<=20) &&
 		(strlen($user)>=3) &&
-		(preg_match("^[a-zA-Z0-9\-_]{3,20}$",$user))
+		(preg_match("/([a-zA-Z0-9\-_]{3,20})/",$user))
 	){
 		return true;
 	}else{
@@ -77,10 +78,10 @@ function crea_user($user,$pass,$email){
 	if(!valida_user($user)){
 		serror('Usuario no v‡lido');
 		return false;
-	}else if(check_user("nombre",$user)){
+	}else if(check_user("user",$user)){
 		serror('El usuario ya existe');
 		return false;
-	}else if(valida_email($email, true, true)){
+	}else if(valida_email($email)){
 		serror("Email no v‡lido");
 		return false;
 	}else if(
@@ -132,7 +133,7 @@ function edita_user($campo,$user,$clave,$valor){
 				}			
 			break;
 			case 'email':
-				if(valida_email($email, true, true)){
+				if(valida_email($email)){
 					$sql = "UPDATE USUARIOS SET $clave = '$valor' WHERE id = $id LIMIT 1";
 				}else{
 					serror('Nuevo email no v‡lido');
@@ -201,11 +202,11 @@ function login($user,$pass){
 		if($logeado){
 			return true;
 		}else{
-			serror('La contrase–a no es v‡lida');
+			serror('KOpass');
 			return false;
 		}
 	}else{
-		serror('El usuario no existe');
+		serror('KOuser');
 		return false;
 	}
 	disconnect();
@@ -219,6 +220,7 @@ function logout(){
 	unset($_SESSION['user']);
 	unset($_SESSION['email']);
 	unset($_SESSION['nivel']);
+	session_unset();
 	session_destroy();
 }
 ?>

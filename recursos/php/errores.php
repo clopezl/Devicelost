@@ -3,6 +3,10 @@ function serror($msg){
 	$GLOBALS['error'] = $msg;
 }
 function rerror(){
-	return $GLOBALS['error'];
+	if(isset($GLOBALS['error'])){
+		return $GLOBALS['error'];
+	}else{
+		return false;
+	}
 }
 ?>
