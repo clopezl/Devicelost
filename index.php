@@ -3,7 +3,7 @@
 	<head>
 		<meta http-equiv="content-type" content="text/html;charset=utf-8">
 		<title>Devicelost 4</title>
-		<! Plugins y librer’as >
+		<! Plugins y librerâ€™as >
 		<script src="recursos/js/jquery.min.js" charset="utf-8"></script>
 		<! Scripts y hojas de estilos >
 		<script src="recursos/js/main.js" charset="utf-8"></script>
@@ -23,13 +23,13 @@
 				
 				<p>Devicelost.com es privado y por el momento no acepta registros. M&aacute;s informaci&oacute;n en <a href="http://www.github.com/emmgfx/Devicelost" target="_blank">GitHub</a></p>
 			
-				<input type="text" placeholder="Nombre de usuario" class="input1" />
-				<input type="password" placeholder="Contrase&ntilde;a" class="input1" />
+				<input type="text" placeholder="Nombre de usuario" class="input1" autofocus="autofocus" tabindex="1" />
+				<input type="password" placeholder="Contrase&ntilde;a" class="input1" tabindex="2" />
 				
 				<div class="cb"><br /></div>
-					<input type="checkbox" name="mantener" id="mantener" class="fl" />
+					<input type="checkbox" name="mantener" id="mantener" class="fl" tabindex="4" />
 					<label for="mantener" class="fl">Mantener sesi&oacute;n en este ordenador</label>
-					<input type="submit" value="Entrar" class="fr button1">
+					<input type="submit" value="Entrar" class="fr button1" tabindex="3" />
 				<div class="cb"></div>
 			</div>
 		</form>
