@@ -6,7 +6,7 @@
 		<! Plugins y librer’as >
 		<script src="recursos/js/jquery.min.js" charset="utf-8"></script>
 		<! Scripts y hojas de estilos >
-		<script src="recursos/js/main.min.js" charset="utf-8"></script>
+		<script src="recursos/js/main.js" charset="utf-8"></script>
 		<link rel="stylesheet" href="recursos/css/main.css" type="text/css" charset="utf-8">
 	</head>
 	<body>
@@ -17,15 +17,19 @@
 	
 	<div id="main">
 		
-		<form id="login">
+		<form id="login" class="animated fadeInUp">
 			<div class="heading">Iniciar sesi&oacute;n</div>
 			<div class="content">
-				<input type="text" placeholder="Usuario" class="input1" />
+				
+				<p>Devicelost.com es privado y por el momento no acepta registros. M&aacute;s informaci&oacute;n en <a href="http://www.github.com/emmgfx/Devicelost" target="_blank">GitHub</a></p>
+			
+				<input type="text" placeholder="Nombre de usuario" class="input1" />
 				<input type="password" placeholder="Contrase&ntilde;a" class="input1" />
 				
-				<div class="cb"></div>
-					<input type="checkbox" name="mantener" id="mantener" class="fl" /> <label for="mantener" class="fl">Mantener sesi&oacute;n en este ordenador</label>
-					<input type="submit" value="Entrar" class="fr">
+				<div class="cb"><br /></div>
+					<input type="checkbox" name="mantener" id="mantener" class="fl" />
+					<label for="mantener" class="fl">Mantener sesi&oacute;n en este ordenador</label>
+					<input type="submit" value="Entrar" class="fr button1">
 				<div class="cb"></div>
 			</div>
 		</form>
