@@ -2,3 +2,7 @@
    font-family:"Aldo";
    src: url("../typo/Aldo PC.ttf");
 }
+@font-face{
+   font-family:"DSDigit";
+   src: url("../typo/DS Digit.ttf");
+}
