@@ -1,14 +1,20 @@
 Devicelost
 ==========
 
+Licencia
+--------
+
+Devicelost by Josep Viciana is licensed under a Creative Commons Reconocimiento-NoComercial-CompartirIgual 3.0 Unported License.
+Creado a partir de la obra en www.devicelost.com.
+
 MySQL
 -----
 
-Para recrear la base de datos busca el archivo 0.sql en recursos/php/mysql_patch, si hay más archivos (1.sql, 2.sql, 3.sql) son actualizaciones que deberás aplicar en orden.
+Para recrear la base de datos busca el archivo 0.sql en recursos/php/mysql_patch, si hay mï¿½s archivos (1.sql, 2.sql, 3.sql) son actualizaciones que deberï¿½s aplicar en orden.
 
-En la base de datos existe una tabla que se llama DBVERSION, donde podrás ver hasta qué parche se ha actualizado la base de datos que estés utilizando. Si faltan parches es importante que los apliques.
+En la base de datos existe una tabla que se llama DBVERSION, donde podrï¿½s ver hasta quÃ© parche se ha actualizado la base de datos que estï¿½s utilizando. Si faltan parches es importante que los apliques.
 
-Código
+CÃ³digo
 ------
 
-Si crees que algo no está bien aplicado o provoca errores, siempre puedes usar la sección issues del proyecto en GitHub para notificarlo.
+Si crees que algo no estï¿½ bien aplicado o provoca errores, siempre puedes usar la secciï¿½n issues del proyecto en GitHub para notificarlo.
