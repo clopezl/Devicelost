@@ -2,8 +2,6 @@
 	<div class="nano">
 		<div class="content">
 			<ul>
-				<li>Menu a</li>
-				<li>Menub</li>
 				<?PHP
 				for($i=0;$i<4;$i++){
 				?>
@@ -24,17 +22,17 @@
 
 <div id="reproductor">
 	<ul id="controles">
-		<li id="anterior"><a href="#">Anterior</a></li>
-		<li id="playpause"><a href="#">Play</a></li>
-		<li id="siguiente"><a href="#">Siguiente</a></li>
+		<li id="anterior"><input type="button" /></li>
+		<li id="playpause"><input type="button" /></li>
+		<li id="siguiente"><input type="button" /></li>
 	</ul>
 	
 	<div id="display">
 		<div id="tiempo">1:23</div>
 		<div id="titulo">Cat Power - I found a reason</div>
-		<div>
-			<div>
-				<div></div>
+		<div id="progressbar">
+			<div id="loaded">
+				<div id="progress"></div>
 			</div>
 		</div>
 	</div>
