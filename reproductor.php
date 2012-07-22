@@ -1,20 +1,25 @@
-<div id="sidebar" class="nano">
-<div class="content">
-	<ul>
-		<?PHP
-		for($i=0;$i<10;$i++){
-		?>
-		<li>Menu <?=$i?></li>
-		<ul>
-			<li><a href="javascript:display('on'); return false;">Test display ON</a></li>
-			<li><a href="javascript:display('off'); return false;">Test display OFF</a></li>
-			<li>Submenu <?=$i?></li>
-		</ul>
-		<?PHP
-		}
-		?>
-	</ul>
-</div>
+<div id="sidebar">
+	<div class="nano">
+		<div class="content">
+			<ul>
+				<li>Menu a</li>
+				<li>Menub</li>
+				<?PHP
+				for($i=0;$i<4;$i++){
+				?>
+				<li>Menu <?=$i?></li>
+				<ul>
+					<li><a href="javascript:display('on'); return false;">Test display ON</a></li>
+					<li><a href="javascript:display('off'); return false;">Test display OFF</a></li>
+					<li><a href="javascript:display('on'); return false;">Test display ON</a></li>
+					<li><a href="javascript:display('off'); return false;">Test display OFF</a></li>
+				</ul>
+				<?PHP
+				}
+				?>
+			</ul>
+		</div>
+	</div>
 </div>
 
 <div id="reproductor">

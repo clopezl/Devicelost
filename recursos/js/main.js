@@ -39,7 +39,7 @@ $(function(){
 				.css("-webkit-animation-delay",delay+"s");
 	}
 	
-	resize = function resize(window){
+	/*resize = function resize(window){
 		var header = $("#header");
 		var footer = $("#reproductor");
 		var sidebar = $("#sidebar");
@@ -48,7 +48,7 @@ $(function(){
 	}
 	$(window).resize(function(){
 		resize($(window));
-	});
+	});*/
 
 	display = function display(que){
 		var display = $("#display");
@@ -61,6 +61,7 @@ $(function(){
 			display.animate({backgroundColor:'#000'}, 300);
 			display.children('*').css("color","transparent");
 		}
+		return true;
 	}
 
 	$("form#login").live("submit",function(){
@@ -86,7 +87,6 @@ $(function(){
 					anima($("form#login"),"bounceOutDown",0.5,2);
 					anima($("#header ul"),"fadeInRight",2.5,0.5);
 					$.ajax("reproductor.php",{
-						
 					}).done(function(data){
 						$("#main").append(data);
 						anima($("#reproductor"),"fadeInUp",2.5,0.5);
@@ -94,6 +94,12 @@ $(function(){
 						setTimeout(function(){
 							$("form#login").remove();
 						},3000);
+					});
+					$.ajax("menu.php",{
+					}).done(function(data){
+						$("#header").append(data);
+						
+						anima($("#menu"),"fadeInUp",3.5,0.5)
 					});
 				break;
 				case 'KOuser':
@@ -111,10 +117,16 @@ $(function(){
 		return false;
 	});
 	$("#logout").live("click",function(){
-		if(!confirm("&iquest;Seguro que quieres salir?")){
+		if(!confirm("\u00bfSeguro que quieres salir?")){
 			return false;	
 		}
 	});
 	
-	$(".nano").nanoScroller();
+	$(".nano").nanoScroller({
+		preventPageScrolling: true,
+		alwaysVisible: false
+	});
+	setTimeout(function(){
+		$(".nano").nanoScroller();
+	},100);
 });

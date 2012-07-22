@@ -17,18 +17,62 @@
 }
 
 #sidebar{
+	position:absolute;
 	background-color:#2d2e33;
 	margin: 0px;
 	padding: 0px;
 	width:220px;
-	position:absolute;
 	top:60px;
-	bottom:93px;
+	bottom:95px;
 	box-shadow:	inset -1px 0px 0px rgba(255,255,255,0.1),
 				1px 0px 0px 0px rgba(0,0,0,0.7);
-	overflow: hidden;
 }
+	#sidebar > div.nano > div.content > ul{
+		margin: 0px;
+		padding: 0px;
+		list-style: none;
+	}
+		#sidebar > div.nano > div.content > ul > li{
+			background: #717a86;
+			background: -moz-linear-gradient(top,  #717a86 0%, #505965 100%);
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#717a86), color-stop(100%,#505965));
+			background: -webkit-linear-gradient(top,  #717a86 0%,#505965 100%);
+			background: -o-linear-gradient(top,  #717a86 0%,#505965 100%);
+			background: -ms-linear-gradient(top,  #717a86 0%,#505965 100%);
+			background: linear-gradient(to bottom,  #717a86 0%,#505965 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#717a86', endColorstr='#505965',GradientType=0 );
+			
+			padding:12px 17px;
+			color:#FFF;
+			text-shadow:0px 1px 0px rgba(0,0,0,0.4);
+			font-size:11px;
+			font-weight: bold;
+			
+			box-shadow: inset 0px -1px 0px 0px #303237,
+						inset 0px 1px 0px 0px #878e98;
+		}
+		#sidebar > div.nano > div.content > ul > ul{
+			list-style: none;
+			padding: 0px 0px;
+			margin: 0px;
+			background-color: #FFF;
+			box-shadow:inset 0px -1px 0px 0px #51555a;
 
+		}
+			#sidebar > div.nano > div.content > ul > ul > li{
+				box-shadow:0px -1px 0px 0px #efeff0;
+			}
+			#sidebar > div.nano > div.content > ul > ul:last-child{
+				border-bottom:1px solid #efeff0;
+			}
+			#sidebar > div.nano > div.content > ul > ul > li a{
+				color:#878d95;
+				text-decoration: none;
+				display:inline-block;
+				font-size: 11px;
+				width:100%;
+				padding:10px 15px;
+			}
 #controles{
 	margin:0px;
 	padding:10px 10px 10px 30px;
