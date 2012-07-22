@@ -17,4 +17,4 @@ En la base de datos existe una tabla que se llama DBVERSION, donde podrás ver h
 Código
 ------
 
-Si crees que algo no est� bien aplicado o provoca errores, siempre puedes usar la sección issues del proyecto en GitHub para notificarlo.
+Si crees que algo no está bien aplicado o provoca errores, siempre puedes usar la sección issues del proyecto en GitHub para notificarlo.
