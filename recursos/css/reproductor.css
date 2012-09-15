@@ -119,6 +119,7 @@
 						0px 2px 1px 0px rgba(0,0,0,0.2);
 			text-decoration: none;
 			color:#333;
+			text-shadow:1px 1px 0px #FFF;
 		}
 			#controles li a:hover,
 			#controles li a:focus{
@@ -142,6 +143,7 @@
 				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9aabb9', endColorstr='#d9dfe4',GradientType=0 );
 				box-shadow:	inset 0px 2px 3px 0px rgba(0,0,0,0.2),
 							0px -2px 1px 0px rgba(0,0,0,0.2);
+				text-shadow:0px 0px 3px #555555;
 			}
 		#controles li#anterior,
 		#controles li#siguiente{
