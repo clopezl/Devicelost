@@ -2,19 +2,18 @@
 	<div class="nano">
 		<div class="content">
 			<ul>
-				<?PHP
-				for($i=0;$i<4;$i++){
-				?>
-				<li>Menu <?=$i?></li>
+				<li><i class="icon-cloud"></i> Gesti&oacute;n de contenidos</li>
 				<ul>
-					<li><a href="javascript:display('on'); return false;">Test display ON</a></li>
-					<li><a href="javascript:display('off'); return false;">Test display OFF</a></li>
-					<li><a href="javascript:display('on'); return false;">Test display ON</a></li>
-					<li><a href="javascript:display('off'); return false;">Test display OFF</a></li>
+					<li><a href="#">Subir m&uacute;sica</a></li>
 				</ul>
-				<?PHP
-				}
-				?>
+				<li><i class="icon-star"></i> Listas personales</li>
+				<ul>
+					<li><a href="#">No hay listas</a></li>
+				</ul>
+				<li><i class="icon-bolt"></i> Listas din&aacute;micas</li>
+				<ul>
+					<li><a href="#">No hay listas</a></li>
+				</ul>
 			</ul>
 		</div>
 	</div>
@@ -22,9 +21,9 @@
 
 <div id="reproductor">
 	<ul id="controles">
-		<li id="anterior"><input type="button" /></li>
-		<li id="playpause"><input type="button" /></li>
-		<li id="siguiente"><input type="button" /></li>
+		<li id="anterior"><a><i class="icon-fast-backward"></i></a></li>
+		<li id="playpause"><a><i class="icon-play"></i></a></li>
+		<li id="siguiente"><a><i class="icon-fast-forward"></i></a></li>
 	</ul>
 	
 	<div id="display">

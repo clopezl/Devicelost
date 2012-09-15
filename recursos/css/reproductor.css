@@ -99,13 +99,13 @@
 		box-shadow:inset 0px 1px 3px rgba(0,0,0,0.5),
 					inset 0px -1px 1px rgba(255,255,255,0.1);
 	}
-		#controles li input{
+		#controles li a{
 			width:60px;
 			height: 60px;
 			border-radius:5000px;
 			overflow:hidden;
 			display:inline-block;
-			color: transparent;
+			font-size:35px;
 			background: #d9dfe4;
 			background: -moz-linear-gradient(top,  #d9dfe4 0%, #9aabb9 100%);
 			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d9dfe4), color-stop(100%,#9aabb9));
@@ -117,10 +117,11 @@
 			border:none;
 			box-shadow:	inset 0px -2px 3px 0px rgba(0,0,0,0.2),
 						0px 2px 1px 0px rgba(0,0,0,0.2);
-
+			text-decoration: none;
+			color:#333;
 		}
-			#controles li input:hover,
-			#controles li input:focus{
+			#controles li a:hover,
+			#controles li a:focus{
 				background: #e8ebee;
 				background: -moz-linear-gradient(top,  #e8ebee 0%, #bfcad3 100%);
 				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e8ebee), color-stop(100%,#bfcad3));
@@ -130,7 +131,7 @@
 				background: linear-gradient(to bottom,  #e8ebee 0%,#bfcad3 100%);
 				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8ebee', endColorstr='#bfcad3',GradientType=0 );
 			}
-			#controles li input:active{
+			#controles li a:active{
 				background: #9aabb9;
 				background: -moz-linear-gradient(top,  #9aabb9 0%, #d9dfe4 100%);
 				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#9aabb9), color-stop(100%,#d9dfe4));
@@ -146,10 +147,19 @@
 		#controles li#siguiente{
 			margin-top:11px;
 		}
-		#controles li#anterior input,
-		#controles li#siguiente input{
-			width:40px;
+		#controles li#anterior a,
+		#controles li#siguiente a{
+			width:33px;
 			height: 40px;
+			font-size:20px;
+			line-height: 37px;
+			padding:0px 0px 0px 7px;
+		}
+		#controles li#playpause a,
+		#controles li#playpause a{
+			width:49px;
+			line-height: 58px;
+			padding:0px 0px 0px 11px;
 		}
 
 
