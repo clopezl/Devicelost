@@ -13,6 +13,7 @@ if (!isset($_SESSION)) {
 		<script src="recursos/js/jquery-ui.min.js" charset="utf-8"></script>
 		<script src="recursos/js/nanoscroller.js" charset="utf-8"></script>
 		<script src="recursos/uploadify-v3.1/jquery.uploadify-3.1.js" charset="utf-8"></script>
+		<script src="recursos/fancybox/jquery.fancybox.pack.js" charset="utf-8"></script>
 		<! Scripts y hojas de estilos >
 		<script src="recursos/js/main.js" charset="utf-8"></script>
 		<link rel="stylesheet" href="recursos/css/main.css" type="text/css" charset="utf-8">

@@ -4,7 +4,7 @@
 			<ul>
 				<li><i class="icon-cloud"></i> Gesti&oacute;n de contenidos</li>
 				<ul>
-					<li><a href="subir-musica.php" class="load"><i class="icon-upload-alt"></i> Subir m&uacute;sica</a></li>
+					<li><a href="subir-musica.php" class="fancymodal fancybox.ajax"><i class="icon-upload-alt"></i> Subir m&uacute;sica</a></li>
 				</ul>
 				<li><i class="icon-star"></i> Listas personales</li>
 				<ul>

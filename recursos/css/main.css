@@ -5,6 +5,7 @@
 @import url(reproductor.css);
 @import url(nanoscroller.css);
 @import url(../uploadify-v3.1/uploadify.css);
+@import url(../fancybox/jquery.fancybox.css);
 
 .cb{
 	clear: both;

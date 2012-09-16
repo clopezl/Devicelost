@@ -122,19 +122,13 @@ $(function(){
 			alert('Se ha producido un error.');
 			return false;
 		}
-		
 		// Cargando
-		
 		$.ajax(href,{
 		}).done(function(data){
-
 			// Cargado
-
 			$("#contenido > .nano > .content").html(data);
-			
 			JSSelectivo(href);
 		});
-		
 		return false;
 	});
 	
@@ -144,7 +138,11 @@ $(function(){
 			    $('#file_upload').uploadify({
 			        'swf'      : 'recursos/uploadify-v3.1/uploadify.swf',
 			        'uploader' : 'recursos/uploadify-v3.1/uploadify.php',
-			        'removeCompleted': false
+			        'removeCompleted': false,
+			        'onSelect' : function(){
+			        	$.fancybox.update();
+				        $.fancybox.reposition();
+			        }
 			    });
 			break;
 		}
@@ -160,7 +158,16 @@ $(function(){
 		preventPageScrolling: true,
 		alwaysVisible: false
 	});
-	setTimeout(function(){
+	
+	$(".fancymodal").fancybox({
+		modal: true,
+		padding: 0,
+		minWidth:400,
+		afterShow: function(){
+			JSSelectivo('subir-musica.php');
+		}
+	});
+	/*setTimeout(function(){
 		$(".nano").nanoScroller();
-	},100);
+	},1000);*/
 });
