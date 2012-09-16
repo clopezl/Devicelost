@@ -100,12 +100,13 @@
 					inset 0px -1px 1px rgba(255,255,255,0.1);
 	}
 		#controles li a{
-			width:60px;
+			-webkit-transition: all 1s ease-in-out;
+   			width:60px;
 			height: 60px;
 			border-radius:5000px;
 			overflow:hidden;
 			display:inline-block;
-			font-size:35px;
+			font-size:25px;
 			background: #d9dfe4;
 			background: -moz-linear-gradient(top,  #d9dfe4 0%, #9aabb9 100%);
 			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d9dfe4), color-stop(100%,#9aabb9));
@@ -118,7 +119,7 @@
 			box-shadow:	inset 0px -2px 3px 0px rgba(0,0,0,0.2),
 						0px 2px 1px 0px rgba(0,0,0,0.2);
 			text-decoration: none;
-			color:#333;
+			color:#444d53;
 			text-shadow:1px 1px 0px #FFF;
 		}
 			#controles li a:hover,
@@ -151,17 +152,16 @@
 		}
 		#controles li#anterior a,
 		#controles li#siguiente a{
-			width:33px;
+			width:30px;
 			height: 40px;
-			font-size:20px;
-			line-height: 37px;
-			padding:0px 0px 0px 7px;
+			font-size:15px;
+			line-height: 40px;
+			padding:0px 0px 0px 10px;
 		}
-		#controles li#playpause a,
 		#controles li#playpause a{
-			width:49px;
-			line-height: 58px;
-			padding:0px 0px 0px 11px;
+			width:45px;
+			line-height: 60px;
+			padding:0px 0px 0px 15px;
 		}
 
 

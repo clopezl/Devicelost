@@ -4,7 +4,7 @@
 			<ul>
 				<li><i class="icon-cloud"></i> Gesti&oacute;n de contenidos</li>
 				<ul>
-					<li><a href="#">Subir m&uacute;sica</a></li>
+					<li><a href="subir-musica.php" class="load">Subir m&uacute;sica</a></li>
 				</ul>
 				<li><i class="icon-star"></i> Listas personales</li>
 				<ul>
@@ -17,6 +17,9 @@
 			</ul>
 		</div>
 	</div>
+</div>
+
+<div id="contenido">
 </div>
 
 <div id="reproductor">

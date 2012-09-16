@@ -116,6 +116,39 @@ $(function(){
 		return false;
 	});
 	
+	$(".load").live("click",function(){
+		var href = $(this).attr("href");
+		if(href=='#'){
+			alert('Se ha producido un error.');
+			return false;
+		}
+		
+		// Cargando
+		
+		$.ajax(href,{
+		}).done(function(data){
+
+			// Cargado
+
+			$("#contenido").html(data);
+			JSSelectivo(href);
+		});
+		
+		return false;
+	});
+	
+	function JSSelectivo(href){
+		switch(href){
+			case 'subir-musica.php':
+			    $('#file_upload').uploadify({
+			        'swf'      : 'recursos/uploadify-v3.1/uploadify.swf',
+			        'uploader' : 'recursos/uploadify-v3.1/uploadify.php',
+			        'removeCompleted': false
+			    });
+			break;
+		}
+	}
+	
 	$("#logout").live("click",function(){
 		if(!confirm("\u00bfSeguro que quieres salir?")){
 			return false;	
