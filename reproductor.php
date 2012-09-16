@@ -4,15 +4,15 @@
 			<ul>
 				<li><i class="icon-cloud"></i> Gesti&oacute;n de contenidos</li>
 				<ul>
-					<li><a href="subir-musica.php" class="load">Subir m&uacute;sica</a></li>
+					<li><a href="subir-musica.php" class="load"><i class="icon-upload-alt"></i> Subir m&uacute;sica</a></li>
 				</ul>
 				<li><i class="icon-star"></i> Listas personales</li>
 				<ul>
-					<li><a href="#">No hay listas</a></li>
+					<li><a><i class="icon-remove"></i> No hay listas</a></li>
 				</ul>
 				<li><i class="icon-bolt"></i> Listas din&aacute;micas</li>
 				<ul>
-					<li><a href="#">No hay listas</a></li>
+					<li><a><i class="icon-remove"></i> No hay listas</a></li>
 				</ul>
 			</ul>
 		</div>
@@ -28,9 +28,9 @@
 
 <div id="reproductor">
 	<ul id="controles">
-		<li id="anterior"><a><i class="icon-fast-backward"></i></a></li>
+		<li id="anterior"><a><i class="icon-backward"></i></a></li>
 		<li id="playpause"><a><i class="icon-play"></i></a></li>
-		<li id="siguiente"><a><i class="icon-fast-forward"></i></a></li>
+		<li id="siguiente"><a><i class="icon-forward"></i></a></li>
 	</ul>
 	
 	<div id="display">

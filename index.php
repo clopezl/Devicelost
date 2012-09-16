@@ -7,7 +7,7 @@ if (!isset($_SESSION)) {
 <html>
 	<head>
 		<meta http-equiv="content-type" content="text/html;charset=utf-8">
-		<title>Devicelost 4</title>
+		<title>Devicelost</title>
 		<! Plugins y librerías >
 		<script src="recursos/js/jquery.min.js" charset="utf-8"></script>
 		<script src="recursos/js/jquery-ui.min.js" charset="utf-8"></script>
