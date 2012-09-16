@@ -130,7 +130,8 @@ $(function(){
 
 			// Cargado
 
-			$("#contenido").html(data);
+			$("#contenido > .nano > .content").html(data);
+			
 			JSSelectivo(href);
 		});
 		

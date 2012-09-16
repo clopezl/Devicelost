@@ -80,9 +80,15 @@ body{
 	
 	#contenido{
 		padding:	15px;
+		box-sizing: border-box;
 		color:		#afc1c5;
 		font-size:	11px;
 		font-weight:bold;
+		position:	absolute;
+		top:		60px;
+		left:		221px;
+		right:		0px;
+		bottom:		96px;
 	}
 		#contenido h2{
 			font-size:	16px;
@@ -156,13 +162,6 @@ body{
 					color: #FFF;
 				}
 
-div#contenido{
-	position:	absolute;
-	top:		60px;
-	left:		221px;
-	right:		0px;
-	bottom:		96px;
-}
 
 form{
 	background-color:			#fdfdfd;

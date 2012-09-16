@@ -20,6 +20,10 @@
 </div>
 
 <div id="contenido">
+	<div class="nano">
+		<div class="content">
+		</div>
+	</div>
 </div>
 
 <div id="reproductor">
